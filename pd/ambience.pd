@@ -1,0 +1,23 @@
+#N canvas 2188 290 536 650 10;
+#X obj 52 189 soundfiler;
+#X obj -55 216 expr $f1*$f2/64;
+#X msg -55 243 list \$1 11025;
+#X obj 53 96 loadbang;
+#X msg 52 167 read -resize \$1 ambienceTable;
+#X obj 64 217 table ambienceTable;
+#X obj -55 273 tabplay~ ambienceTable;
+#X obj -55 49 inlet;
+#X text -59 18 cell coordinates i \, j;
+#X obj -55 73 expr $f1*8+$f2;
+#X msg 53 129 list /home/ccrma/methuselah/samples/resocello.aiff
+;
+#X obj -54 363 outlet~;
+#X connect 0 0 1 1;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 10 0;
+#X connect 4 0 0 0;
+#X connect 6 0 11 0;
+#X connect 7 0 9 0;
+#X connect 9 0 1 0;
+#X connect 10 0 4 0;

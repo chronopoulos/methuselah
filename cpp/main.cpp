@@ -9,8 +9,8 @@ assumes port=13808
 #include <time.h>
 #include "lo/lo.h"
 
-static lo_address monome = lo_address_new(NULL, "10507");
-static lo_address pd = lo_address_new("10.0.2.178", "9000");
+static lo_address monome = lo_address_new(NULL, "18888");
+static lo_address pd = lo_address_new(NULL, "9000");
 
 static int grid[8][8];
 static int diff[8][8];
